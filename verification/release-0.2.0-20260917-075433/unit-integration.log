@@ -1,0 +1,20 @@
+Testing package: C:\work\portlan\.test-output\verified-package-1789599273633592000\portolan_catalog_builder\__init__.py
+test_missing_invalid_and_escaping_references (test_basic_checks.BasicChecksTests.test_missing_invalid_and_escaping_references) ... ok
+test_build_mixed (test_build.BuildTests.test_build_mixed) ... ok
+test_invalid_settings (test_build.BuildTests.test_invalid_settings) ... ok
+test_selected_and_edited (test_build.BuildTests.test_selected_and_edited) ... ok
+test_change_during_snapshot_is_rejected (test_invariants.InvariantTests.test_change_during_snapshot_is_rejected) ... ok
+test_clip_and_cancel (test_invariants.InvariantTests.test_clip_and_cancel) ... ok
+test_off_only_and_scalar_types (test_invariants.InvariantTests.test_off_only_and_scalar_types) ... ok
+test_range_server_and_traversal (test_invariants.InvariantTests.test_range_server_and_traversal) ... ok
+test_translation_and_fallback (test_invariants.InvariantTests.test_translation_and_fallback) ... ok
+test_expression_and_dates (test_snapshot_fields.SnapshotFieldTests.test_expression_and_dates) ... ok
+test_joined_public_field (test_snapshot_fields.SnapshotFieldTests.test_joined_public_field) ... ok
+test_category_rename_and_hidden_field (test_styles.StyleTests.test_category_rename_and_hidden_field) ... ok
+test_graduated_boundaries (test_styles.StyleTests.test_graduated_boundaries) ... ok
+test_dialog_and_settings (test_ui.UiTests.test_dialog_and_settings) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 10.776s
+
+OK

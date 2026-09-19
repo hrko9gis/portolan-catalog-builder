@@ -1,0 +1,9 @@
+{
+  "qgis": "3.44.13-Solothurn",
+  "pid": 9040,
+  "profile": "C:\\work\\portlan\\.test-output\\qgis-installer-audit\\profiles\\release-check/",
+  "passed": true,
+  "zip_sha256": "5aa2432693b2eb24c853129eb5818359021a0c96d01a641d48e436d2108a065c",
+  "installed_via_qgis_zip_installer": true,
+  "loaded_from": "C:\\work\\portlan\\.test-output\\qgis-installer-audit\\profiles\\release-check\\python\\plugins\\portolan_catalog_builder\\__init__.py"
+}

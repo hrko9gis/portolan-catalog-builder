@@ -1,0 +1,93 @@
+{
+  "started_utc": "2026-09-16T22:54:33.633607+00:00",
+  "archive": "C:\\work\\portlan\\dist\\portolan_catalog_builder-0.2.0.zip",
+  "bytes": 424761,
+  "sha256": "e3a198e249e18d1c4826bd66a07693549527c24a6f0f996b5e76641f2819f8ed",
+  "extracted": "C:\\work\\portlan\\.test-output\\verified-package-1789599273633592000",
+  "checks": [
+    {
+      "name": "publication",
+      "command": [
+        "C:\\Users\\hrko\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "scripts/check_publication.py",
+        "--zip",
+        "C:\\work\\portlan\\dist\\portolan_catalog_builder-0.2.0.zip"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.42,
+      "log": "publication.log"
+    },
+    {
+      "name": "unit-integration",
+      "command": [
+        "C:/Program Files/QGIS 3.44.13/bin/python-qgis-ltr.bat",
+        "scripts/run_tests.py"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 26.96,
+      "log": "unit-integration.log"
+    },
+    {
+      "name": "gui-en",
+      "command": [
+        "C:/Program Files/QGIS 3.44.13/bin/python-qgis-ltr.bat",
+        "scripts/gui_smoke.py",
+        "C:\\work\\portlan\\.test-output\\verified-package-1789599273633592000",
+        "en"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 4.69,
+      "log": "gui-en.log"
+    },
+    {
+      "name": "gui-ja",
+      "command": [
+        "C:/Program Files/QGIS 3.44.13/bin/python-qgis-ltr.bat",
+        "scripts/gui_smoke.py",
+        "C:\\work\\portlan\\.test-output\\verified-package-1789599273633592000",
+        "ja"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 2.99,
+      "log": "gui-ja.log"
+    },
+    {
+      "name": "browser",
+      "command": [
+        "C:\\Users\\hrko\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "scripts/browser_smoke.py",
+        "C:\\work\\portlan\\.test-output\\verified-package-1789599273633592000",
+        "C:\\work\\portlan\\.test-output\\gui-1789599308181405800"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 8.34,
+      "log": "browser.log"
+    },
+    {
+      "name": "external-validation",
+      "command": [
+        "C:/Program Files/QGIS 3.44.13/bin/python-qgis-ltr.bat",
+        "portolan_catalog_builder/validation_worker.py",
+        "C:\\work\\portlan\\.test-output\\gui-1789599308181405800",
+        "C:\\work\\portlan\\verification\\release-0.2.0-20260917-075433\\external-validation.json"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 6.06,
+      "log": "external-validation.log"
+    }
+  ],
+  "contains_vendor": false,
+  "external_validation": {
+    "passed": true,
+    "error_count": 0,
+    "warning_count": 0
+  },
+  "finished_utc": "2026-09-16T22:55:23.361148+00:00",
+  "all_passed": true
+}

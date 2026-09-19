@@ -1,0 +1,78 @@
+{
+  "build_status": "completed",
+  "basic_checks": {
+    "status": "passed",
+    "scope": [
+      "input_snapshot",
+      "feature_count",
+      "attributes_and_geometry_fingerprint",
+      "parquet_readback",
+      "optional_pmtiles_readback",
+      "json_and_local_references"
+    ]
+  },
+  "detailed_validation": {
+    "status": "not_run",
+    "reason": "external_validation_required"
+  },
+  "hosting_validation": {
+    "status": "not_run"
+  },
+  "findings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "environment": {
+    "QGIS": "3.44.13-Solothurn",
+    "Python": "3.12.13",
+    "GDAL": "3.13.2",
+    "GeoParquet": true,
+    "PMTiles": true,
+    "PyArrow": true,
+    "Profile": "Portolan 0.2.0",
+    "Detailed validation": "External; not run by this plugin"
+  },
+  "plugin_version": "0.2.0",
+  "collections": {
+    "parks": {
+      "complete": true,
+      "count": 2,
+      "skipped": 0,
+      "repaired": 0,
+      "bbox": [
+        139.735,
+        35.665,
+        139.747,
+        35.669
+      ],
+      "crs": "EPSG:4326",
+      "path": "C:\\work\\portlan\\.test-output\\.portolan-build-uhrlsi6x\\snapshots\\parks.gpkg",
+      "verified_data_fingerprint": "b2f1d6f75d6ae02812249977c1db4a3fb5cc63e6e350f22df42116d58085c349",
+      "maxzoom": 16,
+      "statistics": {
+        "name": {
+          "count": 2,
+          "null_count": 0
+        },
+        "trees": {
+          "count": 2,
+          "null_count": 0,
+          "min": 10,
+          "max": 20,
+          "sum": 30
+        },
+        "secret": {
+          "count": 2,
+          "null_count": 0
+        }
+      },
+      "types": {
+        "name": "string",
+        "trees": "int32",
+        "secret": "string"
+      },
+      "warnings": []
+    }
+  },
+  "output": "C:\\work\\portlan\\.test-output\\gui-1789599308181405800",
+  "report_folder": "C:\\work\\portlan\\.test-output\\gui-1789599308181405800.build-report"
+}

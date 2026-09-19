@@ -1,0 +1,7 @@
+{
+  "qgis": "3.44.13-Solothurn",
+  "pid": 20468,
+  "profile": "C:\\work\\portlan\\.test-output\\qgis-installer-audit\\profiles\\release-check/",
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"<string>\", line 20, in verify\nNameError: name '__file__' is not defined\n"
+}
