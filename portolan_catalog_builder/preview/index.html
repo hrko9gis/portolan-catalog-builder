@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portolan preview</title><link rel="stylesheet" href="vendor/maplibre-gl.css">
+<style>body{margin:0;font:14px system-ui}#map{position:absolute;inset:44px 0 0}header{padding:12px;background:#17384b;color:white}#error{position:absolute;top:52px;left:12px;z-index:5;background:white;color:#a22;max-width:70%;padding:8px;display:none}</style></head>
+<body><header id="title">Portolan · PMTiles preview</header><div id="error"></div><div id="map"></div>
+<script src="vendor/maplibre-gl.js"></script><script src="vendor/pmtiles.js"></script>
+<script>
+(async()=>{
+ const params=new URLSearchParams(location.search); const ja=params.get('lang')==='ja';
+ document.documentElement.lang=ja?'ja':'en';
+ const id=params.get('collection'); if(!/^[a-z][a-z0-9_-]*$/.test(id||''))throw Error('Invalid collection');
+ const base=new URL('../'+id+'/',location.href);
+ const collection=await (await fetch(new URL('collection.json',base))).json();
+ document.getElementById('title').textContent=collection.title+' · '+(ja?'PMTilesプレビュー':'PMTiles preview');
+ const styleURL=new URL('styles/default.json',base);
+ const style=await (await fetch(styleURL)).json();
+ const protocol=new pmtiles.Protocol();maplibregl.addProtocol('pmtiles',protocol.tile);
+ for(const source of Object.values(style.sources)) if(source.url) source.url='pmtiles://'+new URL(source.url,styleURL).href;
+ const map=new maplibregl.Map({container:'map',style,attributionControl:false});
+ window.portolanMap=map;
+ map.addControl(new maplibregl.NavigationControl());
+ const bbox=collection.extent.spatial.bbox[0];
+ map.fitBounds([[bbox[0],bbox[1]],[bbox[2],bbox[3]]],{padding:40,maxZoom:17,duration:0});
+ map.on('error',event=>{const box=document.getElementById('error');box.style.display='block';box.textContent=String(event.error);});
+ map.on('click',event=>{const features=map.queryRenderedFeatures(event.point);if(features.length){const pre=document.createElement('pre');pre.textContent=JSON.stringify(features[0].properties,null,2);new maplibregl.Popup().setLngLat(event.lngLat).setDOMContent(pre).addTo(map);}});
+})().catch(error=>{const box=document.getElementById('error');box.style.display='block';box.textContent=String(error);});
+</script></body></html>
