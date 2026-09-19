@@ -1,0 +1,14 @@
+{
+  "platform": "win32-x86_64",
+  "python": "3.12",
+  "qgis_tested": "3.44.13",
+  "dependencies": [],
+  "web": {
+    "maplibre-gl.css": "43c1d886b5fdf0aac4e7135bd6f84b823d9f48283a648012665f9be52c01389f",
+    "maplibre-gl.js": "1525f971223d81f169f049f1ce50083e6f1643aa6b0ea0716653a550d2d57fc2",
+    "MAPLIBRE-LICENSE.txt": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2",
+    "PMTILES-LICENSE.txt": "0371c38f338835f7fc13ed71176f3d92144e22c8b736a31cced57adbbeb647b3",
+    "pmtiles.js": "afc49d216fd24c0a3c0ff3cd2e0c62d6cdaf062854c3dced778dcab168824f79"
+  },
+  "validation": "external"
+}

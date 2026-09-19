@@ -1,0 +1,21 @@
+[general]
+name=Portolan Catalog Builder
+description=Build Portolan catalogs from QGIS layers with GeoParquet and optional PMTiles.
+about=Create documented static geospatial catalogs with basic export checks using a graphical workflow. English and Japanese UI. Local vector export; no command-line interaction required for creation.
+    Requires QGIS GDAL Parquet support and PyArrow, plus the PMTiles driver when selected. Basic export checks run locally. Detailed validation is external: follow the included guide before publishing. No native validator libraries are bundled or downloaded. Tested on Windows x64, QGIS 3.44.13 with GDAL 3.13.2. Linux, macOS and QGIS 4 are not yet validated.
+version=0.2.0
+qgisMinimumVersion=3.44
+qgisMaximumVersion=3.99
+author=Kohei Hara
+email=hrko9gis@gmail.com
+homepage=https://github.com/hrko9gis/portolan-catalog-builder#readme
+repository=https://github.com/hrko9gis/portolan-catalog-builder
+tracker=https://github.com/hrko9gis/portolan-catalog-builder/issues
+category=Vector
+tags=portolan,stac,geoparquet,pmtiles,catalog
+experimental=True
+icon=resources/icon.svg
+hasProcessingProvider=False
+changelog=0.2.0 - External detailed validation, basic export checks and English/Japanese guides; no bundled native validator.
+    0.1.0 - Initial experimental release: GUI catalog creation, GeoParquet, optional PMTiles, local validation, English and Japanese interfaces.
+deprecated=False

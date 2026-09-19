@@ -1,0 +1,13 @@
+{
+  "name": "portolan-0.2.0-basic-export",
+  "stac": "1.1.0",
+  "portolan": "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+  "geoparquet": "1.1.0",
+  "geometry_encoding": "WKB",
+  "compression": "ZSTD",
+  "row_group_size": 100000,
+  "spatial_sort": "16-bit Hilbert order / SQLite disk index",
+  "validation_network": false,
+  "external_validator_reference": "0.1.8",
+  "detailed_validation": "external_not_run"
+}
